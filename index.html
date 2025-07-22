@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Taniti - Your Paradise Awaits</title>
+    <script src="resources/main.js"></script>
+    <link href="resources/main.css">
+    <style>
+        .hero-section {
+            background-image: url('images/glamour_shots (240).jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-scrolled {
+            background-color: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .card-hover-effect {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold font-headers">Taniti</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-white hover:text-cyan-300 transition">Home</a>
+                <a href="entertainment.html" class="text-white hover:text-cyan-300 transition">Entertainment</a>
+                <a href="restaurants.html" class="text-white hover:text-cyan-300 transition">Restaurants</a>
+                <a href="sightseeing.html" class="text-white hover:text-cyan-300 transition">Sightseeing</a>
+                <a href="booking.html" class="text-white hover:text-cyan-300 transition">Booking</a>
+            </div>
+            <button class="md:hidden text-white" id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-gray-800 bg-opacity-90 rounded-lg">
+            <a href="#" class="block text-white text-center py-2 hover:bg-gray-700">Home</a>
+            <a href="entertainment.html" class="block text-white text-center py-2 hover:bg-gray-700">Entertainment</a>
+            <a href="restaurants.html" class="block text-white text-center py-2 hover:bg-gray-700">Restaurants</a>
+            <a href="sightseeing.html" class="block text-white text-center py-2 hover:bg-gray-700">Sightseeing</a>
+            <a href="booking.html" class="block text-white text-center py-2 hover:bg-gray-700">Booking</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section h-screen flex items-center justify-center text-white text-center">
+        <div class="bg-black bg-opacity-50 p-10 rounded-xl">
+            <h1 class="text-5xl md:text-7xl font-bold font-headers mb-4">Your Paradise Awaits</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto">Discover the magic of Taniti, where turquoise waters, volcanic peaks, and vibrant culture create an unforgettable escape.</p>
+            <a href="booking.html" class="mt-8 inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">
+                Book Now!
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Discover Section -->
+        <section id="discover" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center font-headers mb-2">Discover the Heart of the Pacific</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">From bustling food markets to white sandy beaches, Taniti is an island of beautiful contrasts.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1: Beach Bliss & Ocean Adventures -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover-effect">
+                        <img src="images/glamour_shots (304).jpg" alt="Relaxing on the beach" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Beach Bliss & Ocean Adventures</h3>
+                            <p class="text-gray-600">Immerse yourself in the breathtaking beauty of Taniti's diverse coastlines. The serene sandy shores are perfect for swimming, sunbathing, or simply enjoying the ocean breeze.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Rainforest Exploration & Ziplining Thrills -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover-effect">
+                        <img src="images/rainforest_zipline.jpg" alt="Rainforest Zipline" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Rainforest Exploration & Ziplining Thrills</h3>
+                            <p class="text-gray-600">Embark on an unforgettable journey through lush tropical rainforests, and for the adventurous, experience the exhilaration of zip-lining through the vibrant canopy.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3: Volcano Vista & Island Tours -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover-effect">
+                        <img src="images/valcano_hike.jpg" alt="Volcano Hike" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Volcano Vista & Island Tours</h3>
+                            <p class="text-gray-600">Discover the majestic beauty of Taniti's active volcano with guided tours, or explore the island's charm and native architecture on scenic boat or bus excursions.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4: Cultural Immersion & Local Delights -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg card-hover-effect">
+                        <img src="images/Food (7).jpg" alt="Fresh cooked abundant seafood on display" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Cultural Immersion & Local Delights</h3>
+                            <p class="text-gray-600">Delve into Tanitian culture by visiting the local history museum and savoring the authentic flavors of the island at restaurants serving fresh local fish and rice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiences Section -->
+        <section id="experiences" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center font-headers mb-12">Unforgettable Experiences</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12 mb-12">
+                    <img src="images/glamour_shots (170).jpg" alt="Scuba diving" class="w-full md:w-1/2 rounded-lg shadow-xl">
+                    <div class="mt-8 md:mt-0">
+                        <h3 class="text-3xl font-bold font-headers mb-4">Underwater Wonders & Fishing Expeditions</h3>
+                        <p class="text-gray-600 leading-relaxed">Dive into the crystal-clear waters for an incredible snorkeling experience, or try your hand at deep-sea fishing with chartered tours.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center md:space-x-12 md:space-x-reverse">
+                    <img src="images/food09.jpg" alt="Traditional Polynesian dancers" class="w-full md:w-1/2 rounded-lg shadow-xl">
+                    <div class="mt-8 md:mt-0">
+                        <h3 class="text-3xl font-bold font-headers mb-4">Merriton Landing Nightlife & Entertainment</h3>
+                        <p class="text-gray-600 leading-relaxed">As the sun sets, head to Merriton Landing, a lively hub offering a variety of entertainment options including pubs, a microbrewery, a new dance club, and an arcade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan Your Trip Section -->
+        <section id="plan" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center font-headers mb-12">Plan Your Perfect Getaway</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Accommodation -->
+                    <div class="p-8 border border-gray-200 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4">Where to Stay</h3>
+                        <p class="text-gray-600">from an inexpensive hostel to a four-star resort, find the perfect place to call your island home.</p>
+                    </div>
+                    <!-- Transport -->
+                    <div class="p-8 border border-gray-200 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4">Getting Around</h3>
+                        <p class="text-gray-600">Explore the island by rental car, bus, taxi, or mountain bike!</p>
+                    </div>
+                    <!-- Best Time to Visit -->
+                    <div class="p-8 border border-gray-200 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4">When to Visit</h3>
+                        <p class="text-gray-600">Enjoy warm, tropical weather year-round. The dry season from May to October offers endless sun-drenched days.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center font-headers mb-12">Moments from Paradise</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/glamour_shots (180).jpg" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/glamour_shots (211).jpg" alt=""></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/glamour_shots (190).jpg" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/glamour_shots (279).jpg" alt=""></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/glamour_shots (297).jpg" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/glamour_shots (167).jpg" alt=""></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/Food (1).jpg" alt=""></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="images/glamour_shots (270).jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto text-center">
+            <p style="color:lightslategrey">Images copyright: turtlefiji.com, rainforestadventure.com, anywhere.com</p>
+            <br>
+            <h3 class="text-2xl font-headers mb-4">Come and discover the soul of the Pacific</h3>
+
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-cyan-400">Facebook</a>
+                <a href="#" class="hover:text-cyan-400">Instagram</a>
+                <a href="#" class="hover:text-cyan-400">Twitter</a>
+            </div>
+            <p class="text-gray-400 text-sm">&copy; 2025 Taniti Tourism Board. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for navigation bar effects and mobile menu
+        const navbar = document.getElementById('navbar');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Change navbar style on scroll
+        window.onscroll = function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        };
+
+        // Toggle mobile menu
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu on link click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

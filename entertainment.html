@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Taniti - Your Paradise Awaits</title>
+    <script src="resources/main.js"></script>
+    <link href="resources/main.css">
+    <style>
+        .hero-section {
+            background-image: url('images/glamour_shots (271).jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-scrolled {
+            background-color: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .card-hover-effect {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold font-headers">Taniti</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-white hover:text-cyan-300 transition">Home</a>
+                <a href="#" class="text-white hover:text-cyan-300 transition">Entertainment</a>
+                <a href="restaurants.html" class="text-white hover:text-cyan-300 transition">Restaurants</a>
+                <a href="sightseeing.html" class="text-white hover:text-cyan-300 transition">Sightseeing</a>
+                <a href="booking.html" class="text-white hover:text-cyan-300 transition">Booking</a>
+            </div>
+            <button class="md:hidden text-white" id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-gray-800 bg-opacity-90 rounded-lg">
+            <a href="index.html" class="block text-white text-center py-2 hover:bg-gray-700">Home</a>
+            <a href="#" class="block text-white text-center py-2 hover:bg-gray-700">Entertainment</a>
+            <a href="restaurants.html" class="block text-white text-center py-2 hover:bg-gray-700">Restaurants</a>
+            <a href="sightseeing.html" class="block text-white text-center py-2 hover:bg-gray-700">Sightseeing</a>
+            <a href="booking.html" class="block text-white text-center py-2 hover:bg-gray-700">Booking</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section h-screen flex items-center justify-center text-white text-center">
+        <div class="bg-black bg-opacity-50 p-10 rounded-xl">
+            <h1 class="text-5xl md:text-7xl font-bold font-headers mb-4">Taniti: Adventure Awaits</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto">Taniti offers a diverse range of entertainment to suit every taste. Explore and create unforgettable memories during your island getaway.</p>
+            <a href="booking.html" class="mt-8 inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">
+                Book Now!
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Welcome Message Section -->
+        <section id="discover" class="py-20 bg-white">
+            <div>
+                <h2 class="text-4xl font-bold text-center font-headers mb-2">Adventure Awaits</h2>
+                <p class=" text-gray-600 max-w-3xl mx-auto" style="font-size: 14pt;">
+                    Beyond its stunning natural beauty, Taniti offers a vibrant array of entertainment options to enrich your visit. While many are drawn to the island's exquisite beaches, lush rainforests, and the active volcano, there's so much more to discover. Immerse yourself in local history at the museum, embark on exciting chartered fishing tours, or explore the underwater world with snorkeling. For thrill-seekers, zip-lining through the rainforest provides an unforgettable adventure. Enjoy the evening at various pubs, including a microbrewery, or dance the night away at the new dance club. You can also catch a movie, take breathtaking helicopter rides, have fun at an arcade, browse art galleries, or enjoy a game of bowling. Many of these exciting activities are conveniently located in Merriton Landing, a rapidly developing area on the north side of Yellow Leaf Bay. And for golf enthusiasts, a nine-hole golf course will be ready for play next year.
+                </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiences Section -->
+        <section id="experiences" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <!-- Local Fish & Rice Specialties -->
+                <h2 class="text-4xl font-bold text-center font-headers mb-12">Unforgettable Experiences</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12 mb-12">
+                    <img src="images/glamour_shots (327).jpg" alt="Beach" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Enjoy the Beaches</h3>
+                        <p class="text-gray-600 leading-relaxed">Relax on the soft, white sands or explore the unique rocky shores, perfect for sunbathing, swimming, or simply soaking in the island's beauty.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center md:space-x-12 md:space-x-reverse mb-12">
+                    <img src="images/glamour_shots (209).jpg" alt="Rainforest" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Explore the Rainforest</h3>
+                        <p class="text-gray-600 leading-relaxed">Immerse yourself in the lush, vibrant ecosystem of Taniti's tropical rainforests, offering a refreshing escape into nature.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12 mb-12">
+                    <img src="images/glamour_shots (349).jpg" alt="Volcano" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Visit the Volcano</h3>
+                        <p class="text-gray-600 leading-relaxed">Take an exhilarating trip to Taniti's small but active volcano, a must-see natural wonder.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center md:space-x-12 md:space-x-reverse mb-12">
+                    <img src="images/glamour_shots (350).jpg" alt="museum" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Discover Local History</h3>
+                        <p class="text-gray-600 leading-relaxed">Step back in time at the local history museum and learn about Taniti's rich indigenous heritage.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12 mb-12">
+                    <img src="images/glamour_shots (207).jpg" alt="Fishing" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Go on Chartered Fishing Tours</h3>
+                        <p class="text-gray-600 leading-relaxed">Cast your line into the abundant waters surrounding Taniti for an exciting deep-sea fishing adventure.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center md:space-x-12 md:space-x-reverse mb-12">
+                    <img src="images/glamour_shots (170).jpg" alt="Snorkeling" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Snorkel in Clear Waters</h3>
+                        <p class="text-gray-600 leading-relaxed">Dive into the crystal-clear waters and witness the vibrant marine life thriving beneath the surface.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12 mb-12">
+                    <img src="images/rainforest_zipline.jpg" alt="Zip-lining" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Experience Zip-lining</h3>
+                        <p class="text-gray-600 leading-relaxed">Soar through the rainforest canopy on an exhilarating zip-line, offering breathtaking views and an adrenaline rush.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center md:space-x-12 md:space-x-reverse mb-12">
+                    <img src="images/night_club.jpg" alt="Dance Club" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Dance at the New Dance Club</h3>
+                        <p class="text-gray-600 leading-relaxed">Groove to the rhythm and let loose at Taniti's new dance club, perfect for a night out.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12 mb-12">
+                    <img src="images/movie_theater.jpg" alt="Movie Theater" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">See a Movie</h3>
+                        <p class="text-gray-600 leading-relaxed">Catch the latest blockbuster or a timeless classic at Taniti's local cinema.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center md:space-x-12 md:space-x-reverse mb-12">
+                    <img src="images/helicopter.jpg" alt="Helicopter" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Take a Helicopter Ride</h3>
+                        <p class="text-gray-600 leading-relaxed">Get a bird's-eye view of the stunning island landscape with an unforgettable helicopter tour.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12 mb-12">
+                    <img src="images/arcade.jpg" alt="Arcade" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Play at an Arcade</h3>
+                        <p class="text-gray-600 leading-relaxed">Challenge your friends and family to a variety of games at the lively arcade.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center md:space-x-12 md:space-x-reverse mb-12">
+                    <img src="images/art_gallery.jpg" alt="Art Gallery" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Visit Art Galleries</h3>
+                        <p class="text-gray-600 leading-relaxed">Admire local and international artwork at Taniti's captivating art galleries.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12 mb-12">
+                    <img src="images/bowling.jpg" alt="Bowling" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Go Bowling</h3>
+                        <p class="text-gray-600 leading-relaxed">Enjoy a fun-filled evening of friendly competition at the bowling alley.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row-reverse items-center md:space-x-12 md:space-x-reverse mb-12">
+                    <img src="images/pub.jpg" alt="Pubs" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Visit Local Pubs</h3>
+                        <p class="text-gray-600 leading-relaxed">Unwind and enjoy the local atmosphere at one of Taniti's charming pubs, including a unique microbrewery.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12 mb-12">
+                    <img src="images/golf.jpg" alt="Golf" class="w-full md:w-1/4 rounded-lg shadow-xl">
+                    <div>
+                        <h3 class="text-3xl font-bold font-headers mb-4">Play Golf (Coming Soon)</h3>
+                        <p class="text-gray-600 leading-relaxed">Perfect your swing at the new nine-hole golf course, set to be operational by next year.</p>
+                    </div>
+                </div>                
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto text-center">
+            <p style="color:lightslategrey">Images copyright: turtlefiji.com, Facebook.com (Marc Ventura - Iceland Geology), museetahiti.pf, tahititourisme.com</p>
+            <br>
+            <h3 class="text-2xl font-headers mb-4">Come and discover the soul of the Pacific</h3>
+
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-cyan-400">Facebook</a>
+                <a href="#" class="hover:text-cyan-400">Instagram</a>
+                <a href="#" class="hover:text-cyan-400">Twitter</a>
+            </div>
+            <p class="text-gray-400 text-sm">&copy; 2025 Taniti Tourism Board. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for navigation bar effects and mobile menu
+        const navbar = document.getElementById('navbar');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Change navbar style on scroll
+        window.onscroll = function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        };
+
+        // Toggle mobile menu
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu on link click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

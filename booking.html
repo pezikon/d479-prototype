@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Taniti - Your Paradise Awaits</title>
+    <script src="resources/main.js"></script>
+    <link href="resources/main.css">
+    <style>
+        .nav-scrolled {
+            background-color: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .form-container-bg {
+            background-image: url('images/glamour_shots (303).jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .form-input {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #cbd5e1;
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            background-color: white;
+            border-color: #06b6d4;
+            box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.3);
+            outline: none;
+        }
+        .form-label {
+            color: #334155;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold font-headers">Taniti</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-white hover:text-cyan-300 transition">Home</a>
+                <a href="entertainment.html" class="text-white hover:text-cyan-300 transition">Entertainment</a>
+                <a href="restaurants.html" class="text-white hover:text-cyan-300 transition">Restaurants</a>
+                <a href="sightseeing.html" class="text-white hover:text-cyan-300 transition">Sightseeing</a>
+                <a href="#" class="text-white hover:text-cyan-300 transition">Booking</a>
+            </div>
+            <button class="md:hidden text-white" id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-gray-800 bg-opacity-90 rounded-lg">
+            <a href="index.html" class="block text-white text-center py-2 hover:bg-gray-700">Home</a>
+            <a href="entertainment.html" class="block text-white text-center py-2 hover:bg-gray-700">Entertainment</a>
+            <a href="restaurants.html" class="block text-white text-center py-2 hover:bg-gray-700">Restaurants</a>
+            <a href="sightseeing.html" class="block text-white text-center py-2 hover:bg-gray-700">Sightseeing</a>
+            <a href="#" class="block text-white text-center py-2 hover:bg-gray-700">Booking</a>
+        </div>
+    </nav>
+
+    <main class="form-container-bg py-12 md:py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl">
+                <!-- Form Header -->
+                <div class="text-center mb-8">
+                    <h1 class="font-headers text-4xl md:text-5xl font-bold mb-2">Let's Plan Your Vacation to Taniti!</h1>
+                    <p class="text-lg text-gray-600">Your journey starts here. Fill out the details below, and one of our expert travel agents will craft a personalized itinerary just for you.</p>
+                </div>
+
+                <!-- Booking Form -->
+                <form action="https://wp.zybooks.com/form-viewer.php" method="POST">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                        
+                        <!-- Personal Information -->
+                        <h2 class="md:col-span-2 text-2xl font-headers font-bold border-b pb-2 mb-2">Your Information</h2>
+                        <div>
+                            <label for="full-name" class="block text-sm form-label mb-1">Full Name</label>
+                            <input type="text" name="full-name" id="full-name" required class="w-full form-input rounded-md py-2 px-3">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm form-label mb-1">Email Address</label>
+                            <input type="email" name="email" id="email" required class="w-full form-input rounded-md py-2 px-3">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm form-label mb-1">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" class="w-full form-input rounded-md py-2 px-3">
+                        </div>
+                        <div>
+                            <label for="street-address" class="block text-sm form-label mb-1">Street Address</label>
+                            <input type="text" name="street-address" id="street-address" class="w-full form-input rounded-md py-2 px-3">
+                        </div>
+
+                        <!-- Trip Details -->
+                        <h2 class="md:col-span-2 text-2xl font-headers font-bold border-b pb-2 mb-2 mt-8">Trip Details</h2>
+                        <div>
+                            <label for="departure-date" class="block text-sm form-label mb-1">Desired Departure Date</label>
+                            <input type="date" name="departure-date" id="departure-date" required class="w-full form-input rounded-md py-2 px-3">
+                        </div>
+                        <div>
+                            <label for="vacation-days" class="block text-sm form-label mb-1">Number of Vacation Days</label>
+                            <input type="number" name="vacation-days" id="vacation-days" min="1" required class="w-full form-input rounded-md py-2 px-3">
+                        </div>
+                        <div>
+                            <label for="party-size" class="block text-sm form-label mb-1">Party Size (Number of Travelers)</label>
+                            <input type="number" name="party-size" id="party-size" min="1" required class="w-full form-input rounded-md py-2 px-3">
+                        </div>
+                        <div>
+                            <label for="budget" class="block text-sm form-label mb-1">Budget per Person (USD)</label>
+                            <select id="budget" name="budget" required class="w-full form-input rounded-md py-2 px-3">
+                                <option value="">Select a range</option>
+                                <option value="2000-4000">$2,000 - $4,000</option>
+                                <option value="4000-6000">$4,000 - $6,000</option>
+                                <option value="6000-8000">$6,000 - $8,000</option>
+                                <option value="8000-10000">$8,000 - $10,000</option>
+                                <option value="10000+">$100,000+</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Preferences -->
+                        <h2 class="md:col-span-2 text-2xl font-headers font-bold border-b pb-2 mb-2 mt-8">Your Preferences</h2>
+                        <div class="md:col-span-2">
+                            <label for="lodging" class="block text-sm form-label mb-1">Desired Type of Lodging</label>
+                            <select id="lodging" name="lodging" required class="w-full form-input rounded-md py-2 px-3">
+                                <option value="">Choose your paradise</option>
+                                <option value="hostel">Hostel</option>
+                                <option value="bed-and-breakfast">Bed & Breakfast</option>
+                                <option value="hotel">Hotel</option>
+                                <option value="resort">Resort</option>
+                            </select>
+                        </div>
+                        
+                        <fieldset>
+                            <legend class="block text-sm form-label mb-2">Desired Mode of Transport</legend>
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center">
+                                    <input id="airplane" name="transport-type" type="radio" value="airplane" required class="h-4 w-4 text-cyan-600 border-gray-300 focus:ring-cyan-500" checked>
+                                    <label for="airplane" class="ml-2 block text-sm text-gray-700">Airplane</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="cruise" name="transport-type" type="radio" value="cruise" class="h-4 w-4 text-cyan-600 border-gray-300 focus:ring-cyan-500">
+                                    <label for="cruise" class="ml-2 block text-sm text-gray-700">Cruise Ship</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend class="block text-sm form-label mb-2">Need a Rental Vehicle?</legend>
+                            <div class="flex items-center space-x-6">
+                                <div class="flex items-center">
+                                    <input id="rental-yes" name="rental-vehicle" type="radio" value="yes" required class="h-4 w-4 text-cyan-600 border-gray-300 focus:ring-cyan-500" checked>
+                                    <label for="rental-yes" class="ml-2 block text-sm text-gray-700">Yes</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="rental-no" name="rental-vehicle" type="radio" value="no" class="h-4 w-4 text-cyan-600 border-gray-300 focus:ring-cyan-500">
+                                    <label for="rental-no" class="ml-2 block text-sm text-gray-700">No</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Submit Button -->
+                        <div class="md:col-span-2 mt-8">
+                            <button type="submit" class="w-full bg-cyan-500 text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                                Connect With an Agent
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto text-center">
+            <p style="color:lightslategrey">Images copyright: turtlefiji.com</p>
+            <br>
+            <h3 class="text-2xl font-headers mb-4">Come and discover the soul of the Pacific</h3>
+
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-cyan-400">Facebook</a>
+                <a href="#" class="hover:text-cyan-400">Instagram</a>
+                <a href="#" class="hover:text-cyan-400">Twitter</a>
+            </div>
+            <p class="text-gray-400 text-sm">&copy; 2025 Taniti Tourism Board. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for navigation bar effects and mobile menu
+        const navbar = document.getElementById('navbar');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Change navbar style on scroll
+        window.onscroll = function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        };
+
+        // Toggle mobile menu
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu on link click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
